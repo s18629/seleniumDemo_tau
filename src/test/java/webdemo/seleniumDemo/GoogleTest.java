@@ -27,6 +27,7 @@ public class GoogleTest {
 		ChromeOptions options = new ChromeOptions();
 		options.setHeadless(true);
 		driver = new ChromeDriver(options);
+
 		// Implicity wait -> max czas na znalezienie elementu na stronie
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
@@ -43,7 +44,7 @@ public class GoogleTest {
 
 	@Test
 	public void testTitlePage() {
-    	assertEquals("DuckDuckGo — Prywatność — jeszcze prostsza.", driver.getTitle());
+    	assertEquals("DuckDuckGo — Privacy, simplified.", driver.getTitle());
 	}
 
 	@Test
